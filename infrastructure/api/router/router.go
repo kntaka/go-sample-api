@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/takkee/go-sample-api/infrastructure/api/handler"
+	"github.com/kntaka/go-sample-api/infrastructure/api/handler"
 )
 
 func NewRouter(r *gin.Engine, handler handler.AppHandler) {

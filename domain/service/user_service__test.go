@@ -2,8 +2,8 @@ package service_test
 
 import (
 	"context"
-	"github.com/takkee/go-sample-api/domain/service"
-	"github.com/takkee/go-sample-api/infrastructure/persistence/mock"
+	"github.com/kntaka/go-sample-api/domain/service"
+	"github.com/kntaka/go-sample-api/infrastructure/persistence/mock"
 	"testing"
 )
 

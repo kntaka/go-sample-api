@@ -3,8 +3,8 @@ package datastore
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
-	"github.com/takkee/go-sample-api/domain/model"
-	"github.com/takkee/go-sample-api/domain/repository"
+	"github.com/kntaka/go-sample-api/domain/model"
+	"github.com/kntaka/go-sample-api/domain/repository"
 )
 
 type userActiveRepository struct {

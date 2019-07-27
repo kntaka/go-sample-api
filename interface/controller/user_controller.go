@@ -2,9 +2,9 @@ package controller
 
 import (
 	"context"
-	"github.com/takkee/go-sample-api/domain/model"
-	"github.com/takkee/go-sample-api/infrastructure/api/validator"
-	"github.com/takkee/go-sample-api/usecase"
+	"github.com/kntaka/go-sample-api/domain/model"
+	"github.com/kntaka/go-sample-api/infrastructure/api/validator"
+	"github.com/kntaka/go-sample-api/usecase"
 )
 
 type UserController interface {

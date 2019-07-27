@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 	"errors"
-	"github.com/takkee/go-sample-api/domain/model"
-	"github.com/takkee/go-sample-api/domain/repository"
+	"github.com/kntaka/go-sample-api/domain/model"
+	"github.com/kntaka/go-sample-api/domain/repository"
 )
 
 // creating user service

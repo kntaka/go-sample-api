@@ -2,7 +2,7 @@ package domain
 
 import (
 	"github.com/google/wire"
-	"github.com/takkee/go-sample-api/domain/service"
+	"github.com/kntaka/go-sample-api/domain/service"
 )
 
 var WireSet = wire.NewSet(

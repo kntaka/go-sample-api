@@ -4,7 +4,7 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
-	"github.com/takkee/go-sample-api/domain/model"
+	"github.com/kntaka/go-sample-api/domain/model"
 	"os"
 )
 

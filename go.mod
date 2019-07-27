@@ -1,4 +1,4 @@
-module github.com/takkee/go-sample-api
+module github.com/kntaka/go-sample-api
 
 go 1.12
 

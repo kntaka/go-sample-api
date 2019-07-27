@@ -2,10 +2,10 @@ package usecase_test
 
 import (
 	"context"
-	"github.com/takkee/go-sample-api/domain/model"
-	"github.com/takkee/go-sample-api/domain/service"
-	"github.com/takkee/go-sample-api/infrastructure/persistence/mock"
-	"github.com/takkee/go-sample-api/usecase"
+	"github.com/kntaka/go-sample-api/domain/model"
+	"github.com/kntaka/go-sample-api/domain/service"
+	"github.com/kntaka/go-sample-api/infrastructure/persistence/mock"
+	"github.com/kntaka/go-sample-api/usecase"
 	"testing"
 )
 
