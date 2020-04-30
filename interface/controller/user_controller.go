@@ -2,9 +2,10 @@ package controller
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/infrastructure/api/validator"
-	"github.com/kntaka/go-sample-api/usecase"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/infrastructure/api/validator"
+	"github.com/knwoop/go-sample-api/usecase"
 )
 
 type UserController interface {
@@ -30,7 +31,7 @@ func (uc *userController) Get(ctx context.Context) error {
 func (uc *userController) Create(ctx context.Context, req *validator.UserCreateRequest) error {
 
 	ud := &model.UserDetail{}
-	ud.Name  = req.Name
+	ud.Name = req.Name
 	ud.Email = req.Email
 
 	err := uc.uc.Create(ctx, ud)

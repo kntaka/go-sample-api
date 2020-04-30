@@ -2,8 +2,9 @@ package usecase
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/service"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/service"
 )
 
 type UserUseCase interface {

@@ -2,8 +2,8 @@ package datastore
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 type UserLeaveRepository interface {
@@ -26,4 +26,3 @@ func (ur *userLeaveRepository) Store(ul *model.UserLeave) error {
 func (ur *userLeaveRepository) FindOneByUserId(userID uint64) (*model.UserLeave, error) {
 	return nil, nil
 }
-

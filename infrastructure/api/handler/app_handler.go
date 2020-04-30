@@ -11,6 +11,6 @@ type appHandler struct {
 	UserHandler
 }
 
-func NewAppHandler(ih IndexHandler,uh UserHandler) AppHandler {
+func NewAppHandler(ih IndexHandler, uh UserHandler) AppHandler {
 	return &appHandler{ih, uh}
 }

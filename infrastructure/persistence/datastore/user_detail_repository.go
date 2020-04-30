@@ -2,8 +2,8 @@ package datastore
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 type userDetailRepository struct {
@@ -21,4 +21,3 @@ func (ur *userDetailRepository) Store(u *model.UserDetail) error {
 func (ur *userDetailRepository) FindOneByUserID(userID uint64) (*model.UserDetail, error) {
 	return nil, nil
 }
-

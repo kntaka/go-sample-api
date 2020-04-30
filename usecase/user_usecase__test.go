@@ -2,11 +2,12 @@ package usecase_test
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/service"
-	"github.com/kntaka/go-sample-api/infrastructure/persistence/mock"
-	"github.com/kntaka/go-sample-api/usecase"
 	"testing"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/service"
+	"github.com/knwoop/go-sample-api/infrastructure/persistence/mock"
+	"github.com/knwoop/go-sample-api/usecase"
 )
 
 func TestUserUseCase_Create(t *testing.T) {
@@ -17,9 +18,9 @@ func TestUserUseCase_Create(t *testing.T) {
 	// normal test
 	t.Run("UserID=1", func(t *testing.T) {
 		t.Log("UserID=1")
-		ud :=  &model.UserDetail{}
-		ud.Name    = "test user"
-		ud.Email   = "sample@test.com"
+		ud := &model.UserDetail{}
+		ud.Name = "test user"
+		ud.Email = "sample@test.com"
 		err := s.Create(context.TODO(), ud)
 		if err != nil {
 			actual := err
@@ -30,8 +31,8 @@ func TestUserUseCase_Create(t *testing.T) {
 	// email empty error
 	t.Run("email=empty", func(t *testing.T) {
 		t.Log("email=empty")
-		ud :=  &model.UserDetail{}
-		ud.Name    = "test user"
+		ud := &model.UserDetail{}
+		ud.Name = "test user"
 		err := s.Create(context.TODO(), ud)
 		if err == nil {
 			t.Errorf("got: %v\nwant: %v", nil, "Error")
@@ -41,8 +42,8 @@ func TestUserUseCase_Create(t *testing.T) {
 	// name error
 	t.Run("name=empty", func(t *testing.T) {
 		t.Log("name=empty")
-		ud :=  &model.UserDetail{}
-		ud.Email   = "sample@test.com"
+		ud := &model.UserDetail{}
+		ud.Email = "sample@test.com"
 		err := s.Create(context.TODO(), ud)
 		if err == nil {
 			t.Errorf("got: %v\nwant: %v", nil, "Error")

@@ -2,12 +2,14 @@ package handler
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/infrastructure/api/validator"
-	"github.com/kntaka/go-sample-api/interface/controller"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/infrastructure/api/validator"
+	"github.com/knwoop/go-sample-api/interface/controller"
+
+	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 type UserHandler interface {

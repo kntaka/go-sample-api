@@ -3,8 +3,9 @@ package service
 import (
 	"context"
 	"errors"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 // creating user service

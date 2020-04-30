@@ -2,9 +2,10 @@ package service_test
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/service"
-	"github.com/kntaka/go-sample-api/infrastructure/persistence/mock"
 	"testing"
+
+	"github.com/knwoop/go-sample-api/domain/service"
+	"github.com/knwoop/go-sample-api/infrastructure/persistence/mock"
 )
 
 func TestUserService_Create(t *testing.T) {

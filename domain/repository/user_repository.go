@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/kntaka/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/model"
 )
 
 type UserRepository interface {

@@ -2,8 +2,9 @@ package service
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 // creating user service
@@ -16,13 +17,13 @@ func NewUserService(ur repository.UserRepository, uar repository.UserActiveRepos
 }
 
 type userService struct {
-	ur repository.UserRepository
+	ur  repository.UserRepository
 	uar repository.UserActiveRepository
 }
 
 func (s *userService) Create(ctx context.Context) (uint64, error) {
 	// create user model
-	u    := &model.User{}
+	u := &model.User{}
 	uErr := s.ur.Store(u)
 	if uErr != nil {
 		return 0, uErr
@@ -30,7 +31,7 @@ func (s *userService) Create(ctx context.Context) (uint64, error) {
 
 	// create user status
 	userId := u.ID
-	ua     := &model.UserActive{}
+	ua := &model.UserActive{}
 	ua.UserID = userId
 	uaErr := s.uar.Store(ua)
 	if uaErr != nil {

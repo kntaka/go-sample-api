@@ -1,9 +1,10 @@
 package mock
 
 import (
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
 	"time"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 type userRepository struct {

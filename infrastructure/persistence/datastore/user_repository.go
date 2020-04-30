@@ -2,9 +2,10 @@ package datastore
 
 import (
 	"fmt"
+
 	"github.com/jinzhu/gorm"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/repository"
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/repository"
 )
 
 type userRepository struct {
@@ -29,4 +30,3 @@ func (ur *userRepository) Find(userID uint64) (*model.User, error) {
 
 	return u, nil
 }
-

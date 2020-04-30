@@ -2,10 +2,11 @@ package datastore
 
 import (
 	"fmt"
+	"os"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"os"
+	"github.com/knwoop/go-sample-api/domain/model"
 )
 
 func NewMySqlDB() *gorm.DB {

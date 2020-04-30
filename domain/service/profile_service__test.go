@@ -2,10 +2,11 @@ package service_test
 
 import (
 	"context"
-	"github.com/kntaka/go-sample-api/domain/model"
-	"github.com/kntaka/go-sample-api/domain/service"
-	"github.com/kntaka/go-sample-api/infrastructure/persistence/mock"
 	"testing"
+
+	"github.com/knwoop/go-sample-api/domain/model"
+	"github.com/knwoop/go-sample-api/domain/service"
+	"github.com/knwoop/go-sample-api/infrastructure/persistence/mock"
 )
 
 func TestProfileService_Create(t *testing.T) {
@@ -15,10 +16,10 @@ func TestProfileService_Create(t *testing.T) {
 	// normal test
 	t.Run("UserID=1", func(t *testing.T) {
 		t.Log("UserID=1")
-		ud :=  &model.UserDetail{}
-		ud.UserID  = userID
-		ud.Name    = "test user"
-		ud.Email   = "sample@test.com"
+		ud := &model.UserDetail{}
+		ud.UserID = userID
+		ud.Name = "test user"
+		ud.Email = "sample@test.com"
 		err := s.Create(context.TODO(), ud)
 		if err != nil {
 			actual := "Error"
@@ -29,9 +30,9 @@ func TestProfileService_Create(t *testing.T) {
 	// user id empty error
 	t.Run("UserID=empty", func(t *testing.T) {
 		t.Log("UserID=empty")
-		ud :=  &model.UserDetail{}
-		ud.Name    = "test user"
-		ud.Email   = "sample@test.com"
+		ud := &model.UserDetail{}
+		ud.Name = "test user"
+		ud.Email = "sample@test.com"
 		err := s.Create(context.TODO(), ud)
 		if err == nil {
 			t.Errorf("got: %v\nwant: %v", nil, "Error")
@@ -41,9 +42,9 @@ func TestProfileService_Create(t *testing.T) {
 	// email empty error
 	t.Run("email=empty", func(t *testing.T) {
 		t.Log("email=empty")
-		ud :=  &model.UserDetail{}
-		ud.UserID  = userID
-		ud.Name    = "test user"
+		ud := &model.UserDetail{}
+		ud.UserID = userID
+		ud.Name = "test user"
 		err := s.Create(context.TODO(), ud)
 		if err == nil {
 			t.Errorf("got: %v\nwant: %v", nil, "Error")
@@ -53,9 +54,9 @@ func TestProfileService_Create(t *testing.T) {
 	// name error
 	t.Run("name=empty", func(t *testing.T) {
 		t.Log("name=empty")
-		ud :=  &model.UserDetail{}
-		ud.UserID  = userID
-		ud.Email   = "sample@test.com"
+		ud := &model.UserDetail{}
+		ud.UserID = userID
+		ud.Email = "sample@test.com"
 		err := s.Create(context.TODO(), ud)
 		if err == nil {
 			t.Errorf("got: %v\nwant: %v", nil, "Error")
